@@ -72,7 +72,7 @@ class BaseClient:
 class OpenAIClient(BaseClient):
     def __init__(self, key_path, model):
         super().__init__(key_path, model)
-        self.client = OpenAI(api_key=self.key)
+        self.client = OpenAI(api_key=self.key,base_url=os.environ["base_url"])
 
     def send_request(self, prompt, max_tokens, temperature):
         response = self.client.chat.completions.create(
