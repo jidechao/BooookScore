@@ -7,7 +7,7 @@ import math
 import tiktoken
 from tqdm import tqdm
 from collections import defaultdict
-from utils import APIClient, count_tokens
+from booookscore.utils import APIClient, count_tokens
 
 
 class Summarizer():
